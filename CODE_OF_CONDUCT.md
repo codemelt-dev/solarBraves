@@ -105,8 +105,8 @@ details please see our reporting guidelines below.
 
 If you are contributing to a Stellar open source development project, which is
 managed by Stellar Development Foundation ("Stellar OSS"), then you acknowledge
-that all your contributions are contributed by you under the Apache 2.0 license.
-If your employer(s) has rights to intellectual property that you create that
+that all your contributions are contributed by you under the MIT license. If
+your employer(s) has rights to intellectual property that you create that
 includes your contributions to Stellar OSS, you represent that you have received
 permission to make your contributions on behalf of that employer, that your
 employer has waived such rights for your contributions to SDF, or that your
