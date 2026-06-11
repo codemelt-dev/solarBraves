@@ -35,11 +35,6 @@ lerna-debug.log*
 # macOS-specific files
 .DS_Store
 
-# generated contract clients
-packages/*
-# if you have other workspace packages, add them here
-!packages/.gitkeep
-
-# generated contract client imports
-src/contracts/*
-!src/contracts/util.ts
+# generated contract clients are committed so CI/Vercel can build without
+# the stellar CLI; their dist/ and node_modules/ stay ignored via the
+# global "dist" and "node_modules/" rules above
