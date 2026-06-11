@@ -22,13 +22,16 @@
     "@stellar/design-system": "^3.2.7",
     "@stellar/stellar-sdk": "^14.4.3",
     "@stellar/stellar-xdr-json": "^23.0.0",
+    "@tailwindcss/vite": "^4.3.0",
     "@tanstack/react-query": "^5.90.17",
     "@theahaco/contract-explorer": "^1.1.0",
     "@theahaco/ts-config": "^1.2.0",
     "lossless-json": "^4.3.0",
+    "lucide-react": "^1.17.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-router-dom": "^7.12.0",
+    "tailwindcss": "^4.3.0",
     "zod": "^4.3.5"
   },
   "devDependencies": {
@@ -56,7 +59,6 @@
       "prettier --write --ignore-unknown"
     ]
   },
-  "prettier": "@theahaco/ts-config/prettier"
-,
+  "prettier": "@theahaco/ts-config/prettier",
   "packageManager": "bun@1.2.6"
 }

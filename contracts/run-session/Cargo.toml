@@ -1,0 +1,24 @@
+[package]
+name = "run-session"
+description = "Active dungeon run state for Solar Braves: floors, pending loot, risk multiplier, claim-or-push checkpoints"
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+publish = false
+version.workspace = true
+
+[package.metadata.stellar]
+cargo_inherit = true
+
+[lib]
+crate-type = ["lib", "cdylib"]
+doctest = false
+
+[dependencies]
+soroban-sdk = { workspace = true }
+
+[dev-dependencies]
+soroban-sdk = { workspace = true, features = ["testutils"] }
+# Real sibling contracts, registered natively in integration tests.
+loot-registry = { path = "../loot-registry" }
+dungeon-claims = { path = "../dungeon-claims" }

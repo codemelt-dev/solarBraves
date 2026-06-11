@@ -58,6 +58,21 @@ after_deploy = """
 reset
 """
 
+# Solar Braves contracts. Cross-contract wiring (set_minter / set_recorder /
+# configure) needs all three ids, so it runs in scripts/wire-contracts.sh
+# after deploy instead of after_deploy here.
+[development.contracts.loot_registry]
+client = true
+constructor_args = "--admin me"
+
+[development.contracts.dungeon_claims]
+client = true
+constructor_args = "--admin me"
+
+[development.contracts.run_session]
+client = true
+constructor_args = "--admin me"
+
 # Coming Soon: Specify live contracts to bind & import in this project using the given name.
 # During initialization, these contracts will also be "spooned" into the development network,
 # meaning that their data will match the live network at the given sequence number.
@@ -76,14 +91,11 @@ name = "testnet-user"
 default = true
 
 [staging.contracts]
-# soroban-atomic-swap-contract = { id = "C123..." }
-# soroban-auth-contract = { id = "C234..." }
-# soroban-errors-contract = { id = "C345..." }
-# soroban-hello-world-contract = { id = "C456..." }
-# soroban-increment-contract = { id = "C567..." }
-# soroban-token-contract = { id = "C678..." }
-# eurc = { id = "C789..." }
-guess_the_number = { client = true, constructor_args = "--admin me", after_deploy = "reset" }
+# Solar Braves on testnet. Deployed via `stellar contract deploy`; cross-contract
+# wiring done by scripts/wire-contracts.sh testnet testnet-user
+loot_registry = { id = "CD4M4GJOV6LV6FB26P3IUDMVX5SCCV6CSHG66WTNQ2KZN3YHSQA6HDWW", client = true }
+dungeon_claims = { id = "CC5UKSPM4GNWK5L66NKIU5VBJEEXT55ODIFTNKFNZAIJ4TAEKTDNH3SS", client = true }
+run_session = { id = "CDTICLOD7G4OLZEJHJBBLJQQQE6I3YW4OUCCQXK6XGFX6QTY7QQFLSTR", client = true }
 
 ### Production environment configuration
 [production.network]

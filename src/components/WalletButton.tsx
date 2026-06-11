@@ -13,7 +13,7 @@ import cssStyles from "./WalletButton.module.css"
 
 export const WalletButton = () => {
 	const [showDisconnectModal, setShowDisconnectModal] = useState(false)
-	const { address, isPending, balances, walletWarnings } = useWallet()
+	const { address, isPending, walletWarnings } = useWallet()
 	const buttonLabel = isPending ? "Loading..." : "Connect"
 
 	if (!address) {
@@ -34,10 +34,6 @@ export const WalletButton = () => {
 				opacity: isPending ? 0.6 : 1,
 			}}
 		>
-			<Text as="div" size="sm">
-				Wallet Balance: {balances?.xlm?.balance ?? "-"} XLM
-			</Text>
-
 			<div id="modalContainer">
 				<Modal
 					visible={showDisconnectModal}

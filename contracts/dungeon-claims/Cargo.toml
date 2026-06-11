@@ -1,0 +1,23 @@
+[package]
+name = "dungeon-claims"
+description = "Onchain record of completed dungeon runs, claims, wipes, and key burns for Solar Braves"
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+publish = false
+version.workspace = true
+
+[package.metadata.stellar]
+cargo_inherit = true
+
+[lib]
+# "lib" in addition to "cdylib" so other contract crates can import the
+# generated client and types in their native unit tests.
+crate-type = ["lib", "cdylib"]
+doctest = false
+
+[dependencies]
+soroban-sdk = { workspace = true }
+
+[dev-dependencies]
+soroban-sdk = { workspace = true, features = ["testutils"] }
