@@ -1,4 +1,4 @@
-//! DungeonClaims — run history and aggregate stats.
+//! DungeonClaims - run history and aggregate stats.
 //!
 //! Append-only, written only by the configured recorder (RunSession),
 //! so the record can't be forged. Premium entries double as key burns.

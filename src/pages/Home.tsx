@@ -23,7 +23,7 @@ const LOOP = [
 	{
 		icon: Swords,
 		title: "Delve",
-		body: "Fight floor by floor. Every kill rolls loot into your pending pile — held by the contract, not your client.",
+		body: "Fight floor by floor. Every kill rolls loot into your pending pile - held by the contract, not your client.",
 	},
 	{
 		icon: Coins,
@@ -33,7 +33,7 @@ const LOOP = [
 	{
 		icon: Skull,
 		title: "Wipe or Glory",
-		body: "Die and the pile is gone — recorded onchain, no rollback. Walk out and it mints to your inventory forever.",
+		body: "Die and the pile is gone - recorded onchain, no rollback. Walk out and it mints to your inventory forever.",
 	},
 ]
 
@@ -70,6 +70,16 @@ const Home: React.FC = () => (
 			/>
 
 			<div className="relative z-10 flex max-w-3xl flex-col items-center pt-16 text-center">
+				<div className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-solar/30 bg-solar/10 px-4 py-1.5">
+					<span
+						className="h-1.5 w-1.5 animate-pulse rounded-full bg-solar"
+						aria-hidden
+					/>
+					<span className="font-mono text-xs font-medium text-solar">
+						Solar Braves V0 - Soroban contracts live on Stellar testnet &middot;
+						production game funded by SCF Build
+					</span>
+				</div>
 				<p className="mb-8 font-mono text-xs font-medium uppercase tracking-[0.35em] text-solar">
 					Onchain dungeon RPG &middot; Stellar
 				</p>
@@ -84,7 +94,7 @@ const Home: React.FC = () => (
 
 				<p className="mb-12 max-w-xl text-lg leading-relaxed text-ash">
 					Every checkpoint is a real decision settled onchain. Push deeper for
-					greater loot — or wipe and lose the lot. No rollback. No respawn save.
+					greater loot - or wipe and lose the lot. No rollback. No respawn save.
 				</p>
 
 				<div className="flex flex-col items-center gap-4 sm:flex-row">

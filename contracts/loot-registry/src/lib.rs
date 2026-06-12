@@ -1,4 +1,4 @@
-//! LootRegistry — player inventories and dungeon keys.
+//! LootRegistry - player inventories and dungeon keys.
 //!
 //! Only the configured minter (the RunSession contract) mints items and
 //! burns keys. Keys gate premium dungeons.

@@ -1,4 +1,4 @@
-//! RunSession — a player's active dungeon run, held entirely onchain.
+//! RunSession - a player's active dungeon run, held entirely onchain.
 //!
 //! At each checkpoint the player either banks the pending loot (exit_safe)
 //! or pushes deeper (clear_floor) for better rolls at higher risk. A wipe
@@ -157,7 +157,7 @@ impl RunSession {
         };
 
         // key drop: need 2+ floors, better odds deeper and in premium.
-        // grant_keys is called even for 0 keys — the gate is deterministic
+        // grant_keys is called even for 0 keys - the gate is deterministic
         // but the roll is not, and the footprint must not depend on it.
         let mut keys_found = 0u32;
         if floors_cleared >= 2 {
@@ -235,7 +235,7 @@ impl RunSession {
     }
 
     // Loot rolls use the protocol prng, so the client has no say in outcomes.
-    // Returns the item packed as (kind << 40) | (rarity << 32) | power —
+    // Returns the item packed as (kind << 40) | (rarity << 32) | power -
     // a u64 always encodes to the same size, which keeps the storage write
     // deterministic even though the roll itself isn't (see types.rs).
     fn roll_item(env: &Env, floor: u32, risk_bps: u32) -> u64 {

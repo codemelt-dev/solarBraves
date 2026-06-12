@@ -56,7 +56,7 @@ export function DevConsole() {
 					<div className="mx-auto max-w-7xl px-4 sm:px-6">
 						<div className="flex h-10 items-center justify-between border-b border-edge">
 							<p className="font-mono text-xs text-faded">
-								solar-braves · contract console — TX = signed transaction, SIM =
+								solar-braves · contract console - TX = signed transaction, SIM =
 								free simulation (read)
 							</p>
 							<div className="flex items-center gap-1">
@@ -82,7 +82,7 @@ export function DevConsole() {
 						>
 							{logs.length === 0 && (
 								<p className="text-faded">
-									No calls yet. Enter a dungeon — every checkpoint decision
+									No calls yet. Enter a dungeon - every checkpoint decision
 									lands here.
 								</p>
 							)}

@@ -60,7 +60,7 @@ const Play: React.FC = () => {
 	}, [phase, game.run, game.startRun.isPending])
 
 	// refs alongside state: attack() must not put side effects inside a
-	// setState updater (StrictMode double-invokes updaters — that sends
+	// setState updater (StrictMode double-invokes updaters - that sends
 	// duplicate transactions), and clicks can outpace re-renders
 	const enemyHpRef = useRef(0)
 	const clearingRef = useRef(false)
@@ -93,7 +93,7 @@ const Play: React.FC = () => {
 			setPhase("fight")
 		} catch (e) {
 			// tx errors can be ambiguous (e.g. DUPLICATE after a retry whose
-			// first submission landed) — trust the chain, not the error
+			// first submission landed) - trust the chain, not the error
 			const fresh = await game.refetchRun()
 			if (fresh.data) {
 				setView(fresh.data)
@@ -106,7 +106,7 @@ const Play: React.FC = () => {
 		}
 	}
 
-	// enemy hits back on a timer while fighting — no pause, no regen
+	// enemy hits back on a timer while fighting - no pause, no regen
 	useEffect(() => {
 		if (phase !== "fight") return
 		const t = setInterval(() => {
@@ -193,7 +193,7 @@ const Play: React.FC = () => {
 		} catch (e) {
 			const fresh = await game.refetchRun()
 			if (!fresh.data) {
-				// run is closed onchain — the bank landed despite the error
+				// run is closed onchain - the bank landed despite the error
 				setResult({ banked: view?.pending ?? [] })
 				setView(null)
 				setPhase("banked")
@@ -325,7 +325,7 @@ const Play: React.FC = () => {
 								</p>
 								<h1 className="font-display text-2xl font-bold text-parchment">
 									Floor {floor}
-									{boss && <span className="text-ember"> — Boss</span>}
+									{boss && <span className="text-ember"> - Boss</span>}
 								</h1>
 							</div>
 							<div className="flex items-center gap-3">
@@ -434,7 +434,7 @@ const Play: React.FC = () => {
 				{phase === "checkpoint" && view && (
 					<section aria-labelledby="checkpoint-heading" className="text-center">
 						<p className="mb-2 font-mono text-xs uppercase tracking-widest text-solar">
-							Checkpoint — floor {floor - 1} cleared · {dungeon?.name}
+							Checkpoint - floor {floor - 1} cleared · {dungeon?.name}
 						</p>
 						<h1
 							id="checkpoint-heading"
@@ -498,7 +498,7 @@ const Play: React.FC = () => {
 								<ItemCard key={it.id} item={it} />
 							))}
 							{(result.banked ?? []).length === 0 && (
-								<p className="text-sm text-faded">Empty-handed — but alive.</p>
+								<p className="text-sm text-faded">Empty-handed - but alive.</p>
 							)}
 						</div>
 						<div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -529,7 +529,7 @@ const Play: React.FC = () => {
 						</h1>
 						<p className="mb-8 text-ash">
 							{(result.lost ?? []).length > 0
-								? `${(result.lost ?? []).length} item${(result.lost ?? []).length > 1 ? "s" : ""} lost to the depths. Recorded onchain — no rollback.`
+								? `${(result.lost ?? []).length} item${(result.lost ?? []).length > 1 ? "s" : ""} lost to the depths. Recorded onchain - no rollback.`
 								: "You fell with empty pockets. Small mercies."}
 						</p>
 						<div className="mx-auto mb-10 grid max-w-md gap-2">

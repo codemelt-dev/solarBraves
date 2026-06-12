@@ -101,11 +101,11 @@ const AppLayout: React.FC = () => (
 		<footer className="border-t border-edge">
 			<div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-4 py-6 sm:px-6">
 				<p className="text-sm text-faded">
-					Solar Braves — onchain dungeon RPG on Stellar
+					Solar Braves - onchain dungeon RPG on Stellar
 				</p>
 				<nav className="flex items-center gap-6" aria-label="Footer">
 					<a
-						href="https://github.com/theahaco/scaffold-stellar"
+						href="https://github.com/codemelt-dev/solarBraves"
 						target="_blank"
 						rel="noreferrer"
 						className="cursor-pointer text-sm text-ash transition-colors hover:text-solar"

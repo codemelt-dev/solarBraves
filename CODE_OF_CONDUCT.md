@@ -5,7 +5,7 @@ See bellow:
 
 Stellar and the Stellar Development Foundation (SDF) are built fundamentally
 around the idea of inclusiveness. We aim to work with and enable professionals,
-volunteers, and users all over the world on every aspect of our mission —
+volunteers, and users all over the world on every aspect of our mission -
 including mentorship, teaching, and connecting people. Most of all, we aim to
 create a thriving, open, and welcoming community that leaves people inspired.
 
@@ -30,7 +30,7 @@ details please see our reporting guidelines below.
 
 - **Be kind, cordial, courteous.** There’s no need to be mean or rude, or to
   show contempt towards others.
-- **Be patient — especially with newcomers to the community.**
+- **Be patient - especially with newcomers to the community.**
 - **Be welcoming.** Seek diverse perspectives. Diversity of views and of people
   on teams powers innovation, even if it is not always comfortable. We strive to
   be a community that welcomes and supports people of all backgrounds and

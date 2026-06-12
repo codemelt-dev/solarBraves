@@ -8,7 +8,7 @@ import { NotificationProvider } from "./providers/NotificationProvider.tsx"
 import { WalletProvider } from "./providers/WalletProvider.tsx"
 import "@stellar/design-system/build/styles.min.css"
 
-// Solar Braves is dark-only — force it regardless of stored preference
+// Solar Braves is dark-only - force it regardless of stored preference
 document.body.classList.remove("sds-theme-light")
 document.body.classList.add("sds-theme-dark")
 

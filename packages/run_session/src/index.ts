@@ -104,7 +104,7 @@ export interface RunState {
 	/**
 	 * At-stake loot, packed as kind|rarity|power into a u64 (see lib.rs).
 	 * Packed on purpose: Soroban fixes a transaction's footprint at
-	 * simulation time, and the PRNG re-rolls at apply time — symbol-encoded
+	 * simulation time, and the PRNG re-rolls at apply time - symbol-encoded
 	 * enum variants vary in byte size, so storing them here would make the
 	 * write size non-deterministic and fail with ResourceLimitExceeded.
 	 */

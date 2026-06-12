@@ -7,7 +7,7 @@ import { toItem, toRecord, toRunState, type RunState } from "./convert"
 import { log } from "./logBus"
 import { type Item } from "./types"
 
-// Real game state — every mutation here is a signed Soroban transaction.
+// Real game state - every mutation here is a signed Soroban transaction.
 // Reads are free simulations.
 
 // signAndSend wrapper: unwrap the contract Result or surface its error,
@@ -161,7 +161,7 @@ export function useGame() {
 		address,
 		run: runQ.data ?? null,
 		runLoading: runQ.isLoading,
-		// re-read run state from chain — used to resolve ambiguous tx errors
+		// re-read run state from chain - used to resolve ambiguous tx errors
 		// (e.g. DUPLICATE after a retry, where the first submission landed)
 		refetchRun: () => runQ.refetch(),
 		inventory: inventoryQ.data ?? [],

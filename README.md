@@ -2,7 +2,7 @@
 
 An on-chain dungeon crawler built on [Stellar](https://stellar.org) smart
 contracts (Soroban). Connect a wallet, descend into a dungeon, clear floors to
-earn loot — then decide: bank what you're carrying and walk out, or push deeper
+earn loot - then decide: bank what you're carrying and walk out, or push deeper
 and risk losing it all. Every run, item, and wipe is recorded on-chain.
 
 Built with [Scaffold Stellar](https://github.com/stellar-scaffold/cli), React,
@@ -11,13 +11,13 @@ TypeScript, and Vite. Runs on Stellar **testnet**.
 ## How it plays
 
 1. **Connect** a Stellar wallet (Freighter etc.) and fund it on testnet.
-2. **Pick a dungeon** — Cinder Hollow, The Sunken Choir, or the premium Vault of
+2. **Pick a dungeon** - Cinder Hollow, The Sunken Choir, or the premium Vault of
    the Solar King (requires a key, double the risk and the spoils).
 3. **Clear floors** (up to 5). Each floor can drop Weapons, Armor, Accessories,
    and Runes in Common → Legendary rarities.
 4. **Exit safe** to bank your haul into your on-chain inventory, or keep
    descending. A **wipe** ends the run and the loot is gone.
-5. Your full run history — claims and wipes — lives in the **History** page,
+5. Your full run history - claims and wipes - lives in the **History** page,
    read straight from the contract.
 
 ## Contracts (testnet)
@@ -46,7 +46,7 @@ cp .env.example .env
 # install dependencies
 bun install
 
-# start dev server — also watches contracts and regenerates clients
+# start dev server - also watches contracts and regenerates clients
 bun run dev
 ```
 
@@ -61,7 +61,7 @@ bundles with Vite.
 
 ### Frontend environment variables
 
-Set these (also required on Vercel — Vite bakes them in at build time):
+Set these (also required on Vercel - Vite bakes them in at build time):
 
 ```
 PUBLIC_STELLAR_NETWORK=TESTNET

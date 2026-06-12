@@ -86,7 +86,7 @@ fn boss_floor_drops_extra_loot_then_must_exit() {
     let state = w.session.clear_floor(&w.player);
     assert_eq!(state.pending.len(), (MAX_FLOORS - 1) + 3);
 
-    // Dungeon fully cleared — only exit remains.
+    // Dungeon fully cleared - only exit remains.
     assert_eq!(
         w.session.try_clear_floor(&w.player),
         Err(Ok(Error::MustExit))

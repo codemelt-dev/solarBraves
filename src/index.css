@@ -9,7 +9,7 @@
 @import "tailwindcss/utilities.css";
 
 @theme {
-	/* Solar Braves palette — warm near-black with solar amber */
+	/* Solar Braves palette - warm near-black with solar amber */
 	--color-abyss: #0c0a09;
 	--color-surface: #171310;
 	--color-surface-2: #211b16;
@@ -32,7 +32,7 @@
 	--font-mono: "JetBrains Mono", monospace;
 }
 
-/* Game canvas — full-bleed dark, owns everything between header and footer */
+/* Game canvas - full-bleed dark, owns everything between header and footer */
 .sb-canvas {
 	background-color: var(--color-abyss);
 	color: var(--color-parchment);
@@ -47,7 +47,7 @@
 	content: unset;
 }
 
-/* Solar horizon — warm light rising from below, like sunrise in the deep */
+/* Solar horizon - warm light rising from below, like sunrise in the deep */
 .sb-horizon {
 	background:
 		radial-gradient(
@@ -63,7 +63,7 @@
 		);
 }
 
-/* Film grain — tiny SVG noise tile, barely there */
+/* Film grain - tiny SVG noise tile, barely there */
 .sb-grain::before {
 	content: "";
 	position: absolute;
